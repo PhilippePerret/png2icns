@@ -19,7 +19,9 @@ Et voilà!
 
 ### Bash Script
 
-        # Go to the png2icns folder
+        # ===> Download/clone this folder <===
+
+        # Go to your (new) png2icns folder
         > cd /path/to/png2icns/folder/
 
         # Make `png2icns.sh` script exectable if necessary
