@@ -28,12 +28,34 @@ Et voilà!
         > chmod +x ./png2icns.sh
 
         # Convert PNG image
-        > png2icns -v path/to/your/image.png
+        > ./png2icns.sh -v path/to/your/image.png
 
         # Any help?
-        > png2icns --help
+        > ./png2icns.sh --help
 
 Et voilà!
+
+To make it commandable:
+
+        > sudo ln /PATH/TO/THE/png2icns.sh /usr/local/bin/png2icns
+        # You must set the /PATH/TO/THE path
+
+If you want the command to be `png2icon`:
+
+> sudo ln /PATH/TO/THE/png2icns.sh /usr/local/bin/png2icon
+# You must set the /PATH/TO/THE path
+
+
+Now, you can just do:
+
+        > cd /path/to/the/image.png
+        > png2icns -d image.png
+
+        OR
+
+        > png2icon -d image.png
+
+
 
 ## Keybord Shortcut
 
