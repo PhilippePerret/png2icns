@@ -56,14 +56,14 @@ done
 
 readonly VERBOSE=$verbose
 readonly KEEP_ICONSET_FOLDER=$keepiconsetfolder
-readonly FILE=$query
+readonly FILE="$query"
 FNAME=$(basename $FILE)
 FILE_FOLDER=$(dirname $FILE)
 AFFIXE=${FNAME%%.*}
 ICON_NAME="${AFFIXE}.icns"
 
 
-echo -e "\n\n=== PNG to ICNS Conversion ($FNAME -> $ICON_NAME) ===\n"
+$VERBOSE && echo -e "\n\n=== PNG to ICNS Conversion ($FNAME -> $ICON_NAME) ===\n"
 
 # ---------------------------------------------------------------------
 # Tests
@@ -84,7 +84,7 @@ then
 fi
 
 # File should have 1024x1024 sixe
-retour=`sips -g pixelWidth -g pixelHeight $FILE`
+retour=`sips -g pixelWidth -g pixelHeight "$FILE"`
 extrait=${retour#*pixelWidth: }
 WIDTH=$((0+${extrait%% *}))
 extrait=${retour#*pixelHeight: }
@@ -157,7 +157,7 @@ done
 
 # === Faire les icns ===
 $VERBOSE && printf "Generating ICNS…"
-iconutil -c icns $ICONSET_FOLDER
+iconutil -c icns "$ICONSET_FOLDER"
 
 if [ ! -f icones.icns ];
 then
@@ -167,7 +167,7 @@ fi
 
 # === On renomme le fichier obtenu, qui s'appelle pour le moment
 # === icone.icns
-mv icones.icns $ICON_NAME
+mv icones.icns "$ICON_NAME"
 $VERBOSE && echo " done"
 
 # === Détruire le dossier des PNG ===
@@ -176,7 +176,7 @@ then
   $VERBOSE && echo "I don't remove iconset folder with all PNG images."
 else
   $VERBOSE && printf "* Removing iconset folder…"
-  rm -R $ICONSET_FOLDER
+  rm -R "$ICONSET_FOLDER"
   $VERBOSE && echo " done"
 fi
 
