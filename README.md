@@ -1,6 +1,6 @@
 # PNG Image To ICNS Icon
 
-![illustration.png]
+![Illustration](illustration.png)
 
 A Alfred's workflow and a bash script to convert a 1024x1024 PNG image to a ICNS icon (`.icns`) for your app.
 
@@ -8,11 +8,14 @@ A Alfred's workflow and a bash script to convert a 1024x1024 PNG image to a ICNS
 
 ### Alfred Workflow
 
-* Make the 1024x1024 PNG Image,
-* Choose it in Finder
-* Hit CMD+ALT+CTRL+I (i cap)
+* Import the workflow (*) in [Alfred](https://www.alfredapp.com/),
+* make the 1024x1024 PNG Image,
+* choose it in Finder,
+* hit CMD+ALT+CTRL+i
 
 Et voilà!
+
+> (*) PNGImage_2_ICNSIcon.alfredworkflow
 
 ### Bash Script
 
