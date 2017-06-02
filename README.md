@@ -9,9 +9,10 @@ An Alfred's workflow and a bash script to convert a 1024x1024 PNG image to a ICN
 ### Alfred Workflow
 
 * Import the workflow (*) in [Alfred](https://www.alfredapp.com/),
+* Choose your own keyboard shortcut to run the workflow by editing it,
 * make the 1024x1024 PNG Image,
-* choose it in Finder,
-* hit CMD+ALT+CTRL+i
+* select it in Finder,
+* hit your keyboard shortcut.
 
 Et voilà!
 
