@@ -1,6 +1,6 @@
 # PNG Image To ICNS Icon
 
-![Illustration](illustration.png)
+![Illustration](./assets/img/illustration.png)
 
 A Alfred's workflow and a bash script to convert a 1024x1024 PNG image to a ICNS icon (`.icns`) for your app.
 
@@ -19,11 +19,17 @@ Et voilà!
 
 ### Bash Script
 
-        # Make script exectable if necessary
-        > chmod +x /path/to/the/png2icns.sh
+        # Go to the png2icns folder
+        > cd /path/to/png2icns/folder/
+
+        # Make `png2icns.sh` script exectable if necessary
+        > chmod +x ./png2icns.sh
 
         # Convert PNG image
-        > /path/to/the/png2icns path/to/your/image.png
+        > png2icns -v path/to/your/image.png
+
+        # Any help?
+        > png2icns --help
 
 Et voilà!
 
