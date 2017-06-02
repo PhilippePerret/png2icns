@@ -130,7 +130,7 @@ mkdir $ICONSET_FOLDER
 if [ -f "./${ICON_NAME}" ];
 then
   rm ./$ICON_NAME
-  $VERBOSE && "A icon $ICON_NAME already existed. I removed it."
+  $VERBOSE && echo "A icon $ICON_NAME already existed. I removed it."
 fi
 
 # = D'abord, on doit faire un set de PNG à l'aide de sips
